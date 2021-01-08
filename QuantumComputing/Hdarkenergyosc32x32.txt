@@ -1,0 +1,1 @@
+0.5*((I*(-1.*s + Transpose[s]))/Sqrt[2]) . ((I*(-1.*s + Transpose[s]))/Sqrt[2]) + 100*(MatrixExp[-0.18516401995451026*(s + Transpose[s])] - 2*MatrixExp[-0.09258200997725513*(s + Transpose[s])] + 1.1845575279846237*MatrixExp[-0.06172133998483676*(s + Transpose[s])])
