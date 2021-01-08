@@ -1,0 +1,362 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13189,        354]
+NotebookOptionsPosition[     11028,        309]
+NotebookOutlinePosition[     11518,        327]
+CellTagsIndexPosition[     11475,        324]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Tunneling Probability of the Universe", "Subtitle",
+ CellChangeTimes->{{3.8130713852562838`*^9, 3.813071391688615*^9}, {
+  3.8162002530653257`*^9, 
+  3.8162002591959486`*^9}},ExpressionUUID->"eb5426e8-5e07-469a-ab3d-\
+321d78066c03"],
+
+Cell["December 5, 2020", "Author",
+ CellChangeTimes->{{3.813071432923764*^9, 3.8130714386845045`*^9}, {
+  3.813076535499735*^9, 3.8130765408991823`*^9}, {3.816200261839264*^9, 
+  3.8162002650181646`*^9}},ExpressionUUID->"8e3f43e0-740e-4754-8434-\
+9460af3e5a82"],
+
+Cell[CellGroupData[{
+
+Cell["Start with the dark energy potential,", "Subsubsection",
+ CellChangeTimes->{{3.814021055748043*^9, 3.8140210816600647`*^9}, {
+  3.8140305991355977`*^9, 3.8140306353830943`*^9}, {3.814030678196576*^9, 
+  3.8140307095362144`*^9}, {3.8162003090946507`*^9, 3.816200323909224*^9}, {
+  3.816200402987461*^9, 
+  3.816200435289336*^9}},ExpressionUUID->"b1f1c18b-257e-4169-ab18-\
+feae812f2aae"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{"\[Rule]", " ", 
+    RowBox[{"V", 
+     RowBox[{"(", "\[Phi]", ")"}]}]}], "=", 
+   RowBox[{"100", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["e", 
+       RowBox[{
+        RowBox[{"-", "2"}], 
+        FractionBox["\[Phi]", "7.637626158259733"]}]], "-", 
+      RowBox[{"2", 
+       SuperscriptBox["e", 
+        FractionBox[
+         RowBox[{"-", "\[Phi]"}], "7.637626158259733"]]}], "+", 
+      RowBox[{"1.1845575279846237", 
+       SuperscriptBox["e", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"-", "2"}], "\[Phi]"}], 
+         RowBox[{"3", 
+          RowBox[{"(", "7.637626158259733", ")"}]}]]]}]}], ")"}]}]}],
+  FontSize->18]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.8140299972482104`*^9, 3.814030047394534*^9}, {
+   3.8162003410507264`*^9, 3.8162003637588234`*^9}, 
+   3.8163772751211987`*^9},ExpressionUUID->"d873f135-ad6c-4d86-95ba-\
+09d877eb77b7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+First, we do a Maclaurin series expansion about the minimum of the above \
+potential (this expansion is also found on pg 19 in \
+https://lib-extopc.kek.jp/preprints/PDF/1986/8611/8611145.pdf),\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.814021055748043*^9, 3.8140210816600647`*^9}, {
+   3.8140305991355977`*^9, 3.8140306353830943`*^9}, {3.814030678196576*^9, 
+   3.8140307095362144`*^9}, {3.8162003090946507`*^9, 3.816200323909224*^9}, {
+   3.816200418791626*^9, 3.816200446822583*^9}, 3.8162861722893715`*^9, {
+   3.816374352562667*^9, 3.816374357105303*^9}, {3.816436788048343*^9, 
+   3.8164368171265783`*^9}},ExpressionUUID->"ebeb02f6-d491-48d9-b12c-\
+579a6ef49328"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"\[Rule]", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"V", 
+      RowBox[{"(", "\[Phi]", ")"}]}], "-", 
+     SubscriptBox["V", "min"], "+", 
+     RowBox[{
+      FractionBox[
+       SuperscriptBox["M", "2"], "2"], 
+      SuperscriptBox["\[Phi]", "2"]}], "-", 
+     FractionBox[
+      SuperscriptBox["\[Delta]\[Phi]", "3"], "3"], "+"}], "..."}]}],
+  FontSize->18]], "DisplayFormula",
+ CellChangeTimes->{{3.81620046409846*^9, 3.8162005658347287`*^9}, {
+  3.8163743635942574`*^9, 3.8163743783539248`*^9}, {3.8163744431375093`*^9, 
+  3.816374450614816*^9}, {3.8163744810435557`*^9, 
+  3.8163744839832306`*^9}},ExpressionUUID->"789de26f-ee3e-49c9-9c32-\
+9897c1ba0942"]
+}, Open  ]],
+
+Cell[TextData[{
+ "where ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["V", "min"], "="}], TraditionalForm]], "Subsection",
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3bb072b3-7e02-4db6-835f-56bb28f382cc"],
+ "-0.378498, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["M", "2"], "=", "0.584376"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "21c85195-ca4b-432f-93d4-b38a4350ea6d"],
+ ", and \[Delta]=0.139707 ."
+}], "Subsubsection",
+ CellChangeTimes->{{3.814021055748043*^9, 3.8140210816600647`*^9}, {
+   3.8140305991355977`*^9, 3.8140306353830943`*^9}, {3.814030678196576*^9, 
+   3.8140307095362144`*^9}, {3.8162003090946507`*^9, 3.816200323909224*^9}, {
+   3.816200418791626*^9, 3.816200446822583*^9}, 3.8162861722893715`*^9, {
+   3.816374352562667*^9, 3.816374357105303*^9}, {3.816374912538188*^9, 
+   3.8163749962653017`*^9}, {3.8163750286768*^9, 
+   3.816375042320834*^9}},ExpressionUUID->"c2dfc3de-879f-47e3-829e-\
+cef04ba49173"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "According to the above source the tunnel action is, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "E"], "\[TildeEqual]", 
+    RowBox[{"205", 
+     FractionBox[
+      SuperscriptBox["M", "2"], 
+      SuperscriptBox["\[Delta]", "2"]]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ec1b20e5-3ba6-4911-8f19-28bfa8c824cd"],
+ ". And the tunneling probability for the potential is,"
+}], "Subsubsection",
+ CellChangeTimes->{{3.814021055748043*^9, 3.8140210816600647`*^9}, {
+   3.8140305991355977`*^9, 3.8140306353830943`*^9}, {3.814030678196576*^9, 
+   3.8140307095362144`*^9}, {3.8162003090946507`*^9, 3.816200323909224*^9}, {
+   3.816200418791626*^9, 3.816200446822583*^9}, 3.8162861722893715`*^9, {
+   3.816374352562667*^9, 3.816374357105303*^9}, {3.816374912538188*^9, 
+   3.8163749962653017`*^9}, {3.8163750286768*^9, 3.816375042320834*^9}, {
+   3.816375080448483*^9, 3.816375108889932*^9}, {3.8164372366620045`*^9, 
+   3.8164373385899334`*^9}, {3.8164373696697845`*^9, 
+   3.8164373774454165`*^9}},ExpressionUUID->"e5dc8cca-87ff-4700-8944-\
+68e554d13606"],
+
+Cell[BoxData[{
+ RowBox[{
+  FractionBox[
+   SubscriptBox["S", "E"], "4"], "=", 
+  RowBox[{
+   FractionBox["205", "4"], 
+   RowBox[{"(", 
+    FractionBox[
+     SuperscriptBox["M", "2"], 
+     SuperscriptBox["\[Delta]", "2"]], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"\[Rule]", " ", 
+  RowBox[{"51.25", 
+   RowBox[{"(", 
+    FractionBox[
+     SuperscriptBox["M", "2"], 
+     SuperscriptBox["\[Delta]", "2"]], ")"}]}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.8163751323497972`*^9, 3.8163751902369585`*^9}, {
+  3.8164370928775873`*^9, 3.8164370940146227`*^9}, {3.8164373906303225`*^9, 
+  3.816437455811181*^9}},ExpressionUUID->"7ea322ea-6dde-4c41-bce4-\
+37721bcdb519"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"51.25", "*", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", "0.584376", ")"}], "/", 
+    SuperscriptBox["0.139707", "2"]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.816375195352621*^9, 3.8163752457073593`*^9}, {
+  3.8163753500267134`*^9, 3.816375369469496*^9}, {3.8164370964473534`*^9, 
+  3.816437096727607*^9}, {3.816437460799733*^9, 3.8164374628245754`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"f2d08912-b241-4e42-8844-86b969241152"],
+
+Cell[BoxData["1534.4399860365345`"], "Output",
+ CellChangeTimes->{3.8164375301989293`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"310174df-04c5-43b3-a2fd-a07fbe8b6851"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Finally the Universe will decay,", "Subsubsection",
+ CellChangeTimes->{{3.814021055748043*^9, 3.8140210816600647`*^9}, {
+   3.8140305991355977`*^9, 3.8140306353830943`*^9}, {3.814030678196576*^9, 
+   3.8140307095362144`*^9}, {3.8162003090946507`*^9, 3.816200323909224*^9}, {
+   3.816200418791626*^9, 3.816200446822583*^9}, 3.8162861722893715`*^9, {
+   3.816374352562667*^9, 3.816374357105303*^9}, {3.816374912538188*^9, 
+   3.8163749962653017`*^9}, {3.8163750286768*^9, 3.816375042320834*^9}, {
+   3.816375080448483*^9, 3.816375108889932*^9}, {3.8164372366620045`*^9, 
+   3.8164373385899334`*^9}, {3.8164373696697845`*^9, 
+   3.8164373774454165`*^9}, {3.816437539038149*^9, 
+   3.816437564616452*^9}},ExpressionUUID->"3f16cb5a-985c-4992-9053-\
+dc4acb42d749"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\[Rule]",
+   FontSize->16], 
+  StyleBox[" ",
+   FontSize->16], 
+  RowBox[{
+   StyleBox[
+    SuperscriptBox[
+     StyleBox["e",
+      FontSize->18], 
+     FractionBox[
+      SubscriptBox["S", "E"], "4"]],
+    FontSize->16], 
+   StyleBox[
+    StyleBox[
+     RowBox[{" ", " "}]],
+    FontSize->16], 
+   StyleBox["Planck",
+    FontSize->16], 
+   StyleBox[" ",
+    FontSize->16], 
+   StyleBox["times",
+    FontSize->16], 
+   StyleBox[" ",
+    FontSize->16], 
+   RowBox[{
+    StyleBox["(",
+     FontSize->16], 
+    RowBox[{
+     StyleBox[
+      RowBox[{"~", "5.391"}],
+      FontSize->16], 
+     StyleBox["*",
+      FontSize->16], 
+     SuperscriptBox[
+      StyleBox["10",
+       FontSize->16], 
+      RowBox[{"-", "44"}]], " ", "seconds"}], ")"}]}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.81620046409846*^9, 3.8162005658347287`*^9}, {
+  3.8163743635942574`*^9, 3.8163743783539248`*^9}, {3.8163744431375093`*^9, 
+  3.816374450614816*^9}, {3.8163744810435557`*^9, 3.8163744839832306`*^9}, {
+  3.8164375772127085`*^9, 3.8164376091894655`*^9}, {3.8164378483977613`*^9, 
+  3.8164378954990406`*^9}},ExpressionUUID->"39bdf08a-3620-4b0b-bef6-\
+5a1b6c3e1213"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Exp", "[", "1534.44", "]"}]], "Input",
+ CellChangeTimes->{{3.816375572228388*^9, 3.8163755999493704`*^9}, {
+  3.81643710545802*^9, 3.816437107927618*^9}, {3.8164374689235115`*^9, 
+  3.8164374720027075`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"bad54753-f128-45a8-8f1e-84ce7c895c47"],
+
+Cell[BoxData["2.505098527166740656038327436865`12.768639858966573*^666"], \
+"Output",
+ CellChangeTimes->{{3.8163755820722327`*^9, 3.816375600937278*^9}, {
+  3.8164371003228235`*^9, 3.8164371087692313`*^9}, {3.816437466252577*^9, 
+  3.8164374728259892`*^9}},
+ CellLabel->"Out[9]=",ExpressionUUID->"bb17911d-0737-4c88-a080-fef1a5fa7f30"]
+}, Open  ]],
+
+Cell[TextData[{
+ "After doing some simple conversions from Planck times -> seconds -> years, \
+we find out that the tunneling time for the Universe is approximately ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"4.2823", "*", 
+    SuperscriptBox["10", "615"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "0ef58b79-0b6e-4ed0-a363-6679d0e4475a"],
+ " years, which is good for us because the Universe is only ~ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"13.82", "*", 
+    SuperscriptBox["10", "9"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c6226043-4bbc-4f09-aff8-e165a2e20843"],
+ " years old! So the Universe won\[CloseCurlyQuote]t be tunneling out of \
+existence anytime soon!!! HOORAY!"
+}], "Text",
+ CellChangeTimes->{{3.8164375025042486`*^9, 3.816437512049444*^9}, {
+  3.816437615008999*^9, 3.816437746180615*^9}, {3.816438288817808*^9, 
+  3.8164383925683713`*^9}},ExpressionUUID->"5fc8d676-bd94-4189-905b-\
+e807463bf0ef"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{960, 988},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"53d459f4-bfbe-4ef8-99cc-74ef0d257ac5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 238, 4, 53, "Subtitle",ExpressionUUID->"eb5426e8-5e07-469a-ab3d-321d78066c03"],
+Cell[821, 28, 261, 4, 31, "Author",ExpressionUUID->"8e3f43e0-740e-4754-8434-9460af3e5a82"],
+Cell[CellGroupData[{
+Cell[1107, 36, 391, 6, 44, "Subsubsection",ExpressionUUID->"b1f1c18b-257e-4169-ab18-feae812f2aae"],
+Cell[1501, 44, 935, 28, 43, "DisplayFormulaNumbered",ExpressionUUID->"d873f135-ad6c-4d86-95ba-09d877eb77b7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2473, 77, 680, 11, 69, "Subsubsection",ExpressionUUID->"ebeb02f6-d491-48d9-b12c-579a6ef49328"],
+Cell[3156, 90, 698, 19, 52, "DisplayFormula",ExpressionUUID->"789de26f-ee3e-49c9-9c32-9897c1ba0942"]
+}, Open  ]],
+Cell[3869, 112, 993, 24, 45, "Subsubsection",ExpressionUUID->"c2dfc3de-879f-47e3-829e-cef04ba49173"],
+Cell[CellGroupData[{
+Cell[4887, 140, 1117, 23, 66, "Subsubsection",ExpressionUUID->"e5dc8cca-87ff-4700-8944-68e554d13606"],
+Cell[6007, 165, 671, 19, 94, "DisplayFormula",ExpressionUUID->"7ea322ea-6dde-4c41-bce4-37721bcdb519"],
+Cell[CellGroupData[{
+Cell[6703, 188, 462, 9, 32, "Input",ExpressionUUID->"f2d08912-b241-4e42-8844-86b969241152"],
+Cell[7168, 199, 169, 2, 32, "Output",ExpressionUUID->"310174df-04c5-43b3-a2fd-a07fbe8b6851"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7386, 207, 764, 11, 44, "Subsubsection",ExpressionUUID->"3f16cb5a-985c-4992-9053-dc4acb42d749"],
+Cell[8153, 220, 1186, 44, 38, "DisplayFormula",ExpressionUUID->"39bdf08a-3620-4b0b-bef6-5a1b6c3e1213"],
+Cell[CellGroupData[{
+Cell[9364, 268, 309, 5, 28, "Input",ExpressionUUID->"bad54753-f128-45a8-8f1e-84ce7c895c47"],
+Cell[9676, 275, 335, 5, 32, "Output",ExpressionUUID->"bb17911d-0737-4c88-a080-fef1a5fa7f30"]
+}, Open  ]],
+Cell[10026, 283, 974, 22, 78, "Text",ExpressionUUID->"5fc8d676-bd94-4189-905b-e807463bf0ef"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
